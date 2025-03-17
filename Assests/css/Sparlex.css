@@ -3,3 +3,22 @@
     padding: 0;
     box-sizing: border-box;
 }
+:root{
+    --primary-color: #E7A391;
+    --secondary-color: #F5F2EC;
+    --tertiary-color: #FDF6F2;
+    --text-color-light: #707070;
+    --white: #fff;
+    --black: #000;
+    --white-rgb: 255, 255, 255;
+    --black-rgb: 0, 0, 0;
+    --heading-font-size: 30px;
+    --text-size: 20px;
+    --pri-font: 'Mulish';
+    --sec-font: 'Literata';
+}
+body{
+    font-family: var(--pri-font);
+    background-color: var(--white);
+    color: var(--black);
+}
