@@ -131,7 +131,7 @@
     font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
     font-family: 'Literata';
     font-style: normal;
-    font-weight: 200;
+    font-weight: 0;
     src: url('../fonts/literata-v35-latin-200.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
   }
   /* literata-200italic - latin */
