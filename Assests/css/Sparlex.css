@@ -1297,7 +1297,7 @@ body{
     top: 18%;
     left: 120%;
     font-size: 50px;
-    font-family: var(--pri-font);
+    font-family: var(--sec-font);
     transition: all 1.5s ease;    
  }
  .container-6:hover .heading{
