@@ -793,6 +793,7 @@ body{
     /* border: 2px solid black; */
     gap: 30px;
     background-color: var(--secondary-color);
+    overflow: hidden;
 }
 .container-4::before{
     content: "";
@@ -1148,6 +1149,7 @@ body{
     width: calc(1000px * 8);
     overflow: hidden;
     animation: scroll 40s infinite linear;
+    align-items: center;
 }
 .slide{
     width:  1000px;
@@ -1158,10 +1160,11 @@ body{
     font-family: var(--sec-font);
     letter-spacing: 5px;
 }
-.slide-p img{
+.img-flower img{
     width: 50px;
     height: 50px;
     object-fit: cover;
+    
 }
 .slide-p span{
     font-size: 100px;
@@ -1636,13 +1639,15 @@ option:hover{
     height: 65%;
     /* background-color: #E7A391; */
     bottom: 10%;
-    left: -100%;
+    left: -50%;
     display: flex;
     flex-wrap: wrap;
     transition: all 1.5s ease;
+    opacity: 0;
 }
 .container-8:hover .left{
     left: 5%;
+    opacity: 1;
 }
 .left-box{
     width: 100%;
@@ -1661,14 +1666,16 @@ option:hover{
     height: 65%;
     /* background-color: #E7A391; */
     bottom: 10%;
-    right: -100%;
+    right: -50%;
     display: flex;
     flex-wrap: wrap;
     gap: 0;
     transition: all 1.5s ease;
+    opacity: 0;
 }
 .container-8:hover .right{
     right: 5%;
+    opacity: 1;
 }
 .right-box{
     width: 100%;
@@ -1735,6 +1742,11 @@ option:hover{
     text-align: center;
     line-height: 60px;
     font-family: var(--pri-font);
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+.title:hover h3{
+    color: var(--primary-color);
 }
 .title p{
     font-size: 18px;
@@ -1744,7 +1756,7 @@ option:hover{
 }
 .description{
     position: absolute;
-    left: 17%;
+    left: 18%;
     top: 50%;
     font-size: 20px;
     color: rgba(var(--black-rgb), 0.6);
@@ -1772,6 +1784,6 @@ option:hover{
     height: 50px;
     top: 30%;
     left: 90%;
-    font-size: 30px;
+    font-size: 25px;
     font-family: var(--pri-font);
 }
