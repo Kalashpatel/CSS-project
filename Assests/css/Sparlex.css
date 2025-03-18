@@ -42,10 +42,17 @@ h1, h2, h3, h4, h5, h6{
     font-family: var(--title-font);
     font-weight: 400;
 }
-.container{
+.container-h{
     max-width: 100%;
     margin-left: auto;
-    margin-right: auto;
+    margin-right: auto;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+    padding-left: var(--gw);
+    padding-right: var(--gw);
+}
+.container{
+    max-width: 95%;
+    margin-left: auto;
+    margin-right: auto;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
     padding-left: var(--gw);
     padding-right: var(--gw);
 }
@@ -54,6 +61,7 @@ h1, h2, h3, h4, h5, h6{
     flex-wrap: wrap;
     margin-left: calc(-1 * var(--gw));
     margin-right: calc(-1 * var(--gw));
+    padding: 10px;
 }
 .col-1{
     width: 8.3333%;
@@ -126,4 +134,575 @@ h1, h2, h3, h4, h5, h6{
 }
 .social-side ul li i{
     margin-right: 40px;
+}
+
+/*=========== logo ============= */
+.sticky{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: var(--white);
+    /* box-shadow: 0 2px 5px rgba(var(--black-rgb), 0.1); */
+}
+.logo{
+    /* border: 2px solid black; */
+    height: 45px;
+    overflow: hidden;
+}
+.logo img{
+    height: 45px;
+    object-fit: contain;
+}
+/*=========== nav ============= */
+.nav-list{
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    height: 100%;
+    /* border: solid 2px black; */
+    justify-content: center;
+    padding: 20px;
+    
+}
+.nav-item{
+    position: relative;
+    transition: all 2s ease;
+    z-index: 1000;
+}
+.nav-item a{
+    text-decoration: none;
+    font-size: 17px;
+    color: var(--text-color-light);
+    font-family: var(--pri-font);
+    margin: 5px;
+}
+/*============== dropdown ============= */
+.dropdown{
+    position: absolute;
+    top: 100%;
+    left: -10px;
+    list-style: none;
+    width: 200px;
+    /* border: 2px solid black; */
+    display: none;
+    background-color: white;
+    z-index: 1000;
+    font-family: var(--pri-font);
+}
+.dropdown li{
+    border-bottom: 1px solid rgba(var(--black-rgb), 0.1);
+    padding: 20px 20px;
+    z-index: 1000;
+    transition: all 0.5s ease-in-out;
+}
+.nav-item:hover .dropdown{
+    display: block;
+    z-index: 1000;
+}
+.dropdown a:hover li{
+    background-color: rgb(196, 196, 196);
+    z-index: 1000;
+    border-left: 8px solid var(--primary-color);
+}
+/*============== search icon ============= */
+.icon{
+    height: 100%;
+    /* border: 2px solid black; */
+    padding: 10px;
+    text-align: center;
+    font-size: 30px;
+}
+.icon a{
+    color: var(--black);
+}
+/*============== button ============= */
+.botton{
+    position: relative;
+    height: 90%;
+    /* border: 2px solid black; */
+    padding: 10px;
+    border-radius: 50px;
+    background-color: var(--primary-color);
+    cursor: pointer;
+    overflow: hidden;
+    text-align: center;
+    line-height: 35px;
+    transition: all 0.5s ease;
+    display: inline-block;
+}
+.botton a{
+    text-decoration: none;
+    color: var(--white);
+    font-size: 15px;
+    z-index: 1;
+    position: relative;
+    font-family: var(--pri-font);
+}
+.botton::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: var(--black);
+    top: 0;
+    left: -100%;
+    transition: all 0.5s ease;
+}
+.botton:hover::before{
+    left: 0;
+}
+.button:hover a {
+    color: var(--white); /* Make text visible on hover */
+}
+/*============== line icon ============= */
+.line{
+    height: auto;
+    /* border: 2px solid black; */
+    padding: 15px;
+}
+.line .line1{
+    width: 35%;
+    height: 2px;
+    background-color: var(--black);
+    margin: 8px;
+    transition: all 0.5s ease;
+}
+.line:hover .line1{
+    width: 25%;
+}
+.line .line2{
+    width: 25%;
+    height: 2px;
+    background-color: var(--black);
+    margin: 8px;
+    transition: all 0.5s ease;
+}
+.line:hover .line2{
+    width: 35%;
+}
+.line .line3{
+    width: 35%;
+    height: 2px;
+    background-color: var(--black);
+    margin: 8px;
+    transition: all 0.5s ease;
+}
+.line:hover .line3{
+    width: 25%;
+}
+
+/*============== banner-section2 ============= */
+
+.img-container{
+    position: relative;
+    height: 800px;
+    /* border: 2px solid black; */
+    border-radius: 30px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.img-container::before, .img-container::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: all 30s ease;
+}
+.img-container::before{
+    background-image: url(../images/section2-banner/img1.jpg);
+    opacity: 1;
+    transform: scale(1);
+    animation: fade 15s infinite;
+    transform: scale(1);
+}
+@keyframes fade{
+    0%{
+        transform: scale(1.1);
+
+    }
+    40%{
+        transform: scale(1.2);
+
+    }
+    60%{
+        transform: scale(1.3);
+
+    }
+    100%{
+        transform: scale(1.4);
+
+    }
+}
+.img-container::after{
+    background-image: url(../images/section2-banner/img2.jpg);
+    opacity: 0;
+    transform: scale(1);
+    animation: Fadeimage 15s infinite alternate;
+    
+}
+@keyframes Fadeimage{
+    0%{
+        opacity: 0;
+        transform: scale(1.1);
+    }
+    40%{
+        opacity: 0;
+        transform: scale(1.1);
+    }
+    60%{
+        opacity: 1;
+        transform: scale(1.2);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1.3);
+    }
+}
+
+/*============== banner text ============= */
+
+.slide-left{
+    position: absolute;
+    width: 500px;
+    height: 50px;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    z-index: 1000;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    animation: slidein 2s ease-in-out forwards;
+}
+
+.slide-left img{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 0%;
+    top: 60%;
+    transform: translate(-50%, -50%);
+}
+.slide-left p{
+    font-size: var(--heading-font-size);
+    color: rgba(255, 255, 255, 0.8);
+    margin-left: 30px;
+    line-height: 50px;
+    font-family: var(--sec-font);
+}
+@keyframes slidein{
+    0%{
+        left: -100%;
+        opacity: 0;
+    }
+    20%{
+        opacity: 1;
+    }
+    100%{
+        left: 30%;
+        opacity: 1;
+    }
+}
+.slide-left-2{
+    position: absolute;
+    width: 500px;
+    height: 50px;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    z-index: 1000;
+    top: 55%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+    animation: slidein 2s ease-in-out forwards;
+}
+.slide-left-2 h2{
+    font-size: 100px;
+    color: white;
+    letter-spacing: 2px;
+    font-family: var(--sec-font);
+}
+.slide-right{
+    position: absolute;
+    width: 900px;
+    height: auto;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    top: 65%;
+    right: 25%;
+    /* transform: translate(-50%, -50%); */
+    z-index: 1000;
+    animation: slide 2s ease-in-out;
+}
+.slide-right p{
+    font-size: 100px;
+    color: white;
+    font-family: var(--sec-font);
+
+}
+@keyframes slide{
+    0%{
+        right: -100%;
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        right: 25%;
+        opacity: 1;
+    }
+}
+
+/*============== button ============= */
+
+.img-container .button{
+    position: relative;
+    width: 200px;
+    height: 50px;
+    /* border: 2px solid black; */
+    padding: 10px;
+    border-radius: 50px;
+    background-color: var(--primary-color);
+    cursor: pointer;
+    overflow: hidden;
+    text-align: center;
+    transition: all 0.5s ease;
+    display: inline-block;
+    z-index: 1000;
+    top: 85%;
+    left: 13%;
+    /* animation: slidein 2s ease-in-out forwards; */
+}
+.img-container .button a{
+    text-decoration: none;
+    color: azure;
+    font-size: 20px;
+    z-index: 1;
+    position: relative;
+    line-height: 30px;
+}
+.img-container .button::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgb(7, 7, 7);
+    top: 0;
+    left: -100%;
+    transition: all 0.5s ease;
+}
+.img-container .button:hover::before{
+    left: 0;
+}
+.img-container .button:hover a {
+    color: white; /* Make text visible on hover */
+}
+/*============== banner-section2 end ============= */
+
+/*============== section-3 ============= */
+
+.container-1 {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 700px;
+    margin-top: 10px;
+}
+/* Background Image */
+.container-1::before {
+    content: "";
+    background-image: url(../images/section3-about/img-3.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    width: 30%;
+    height: 90%;
+    top: 20%;    
+    left: 0;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+/* Text Side */
+.text-side {
+    position: relative;
+    height: 100%;
+    /* border: 2px solid black; */
+    padding-left: 40px;
+    overflow: hidden;
+}
+
+/* "About" Section (Image + Text) */
+.text-side .about {
+    position: absolute;
+    width: 200px;
+    height: 50px;
+    top: 20%;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+}
+
+/* Image Inside "About" */
+.text-side .about img {
+    width: 40px;
+}
+
+/* "About" Text */
+.text-side .about p {
+    margin-left: 10px;
+    font-size: 30px;
+    color: rgba(var(--black-rgb), 0.5);
+    font-family: var(--sec-font);
+}
+
+/* H2 Heading - Hidden by Default */
+.text-side .h2 {
+    position: absolute;
+    width: 100%;
+    top: 27%;
+    font-size: 50px;
+    font-weight: lighter;
+    opacity: 0;
+    right: -100%; /* Start off-screen */
+    transition: all 1s ease-out; /* Smooth transition */
+}
+
+/* H2 Text Font */
+.text-side .h2 p {
+    font-weight: lighter;
+    font-family: var(--sec-font);
+}
+
+/* ✅ H2 Appears on Hover */
+.container-1:hover .text-side .h2 {
+    right: -40px; /* Moves into view */
+    opacity: 1;
+}
+.text-side .para{
+    width: 90%;
+    position: absolute;
+    top: 50%;
+    font-size: 20px;
+    padding-right: 21px;
+    /* background-color: aqua; */
+    color: rgba(var(--black-rgb), 0.6);
+    font-size: var(--pri-font);
+}
+.ul-container{
+    width: 98%;
+    height: 100px;
+    /* background-color: bisque; */
+    position: absolute;
+    top: 60%;
+    display: flex;
+    padding: 20px;
+    font-size: 20px;
+    color: rgba(var(--black-rgb), 0.6);
+}
+.ul-container ul li{
+    margin: 20px;
+    list-style: none;
+    font-family: var(--pri-font);
+}
+.ul-container ul li i{
+    color: var(--primary-color);
+}
+.button2{
+    position: relative;
+    width: 200px;
+    height: 50px;
+    border: 2px solid var(--primary-color);
+    padding: 10px;
+    border-radius: 50px;
+    background-color: rgba(var(--white-rgb), 0.9);
+    cursor: pointer;
+    overflow: hidden;
+    text-align: center;
+    line-height: 20px;
+    transition: all 0.5s ease;
+    display: inline-block;
+    z-index: 1000;
+    top: 90%;
+    left: 5%;
+    /* animation: slidein 2s ease-in-out forwards; */
+}
+.button2 a{
+    text-decoration: none;
+    color: var(--primary-color);
+    font-size: 20px;
+    z-index: 1;
+    position: relative;
+    line-height: 30px;
+    font-family: var(--pri-font);
+}
+.button2::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: var(--black);
+    top: 0;
+    left: -100%;
+    transition: all 0.5s ease;
+}
+.button2:hover::before{
+    left: 0;
+}
+.button2:hover a {
+    color: var(--white); /* Make text visible on hover */
+}
+.img-container-2{
+    position: relative;
+    width: 40%;
+    height: 80%;
+    /* border: 2px solid black; */
+    padding-left: 40px;
+    overflow: hidden;
+    background-image: url(../images/section3-about/woman.jpg);
+    object-fit: cover;
+    margin: 50px;
+    margin-top: 70px;
+    border-radius: 30px;
+}
+.box1{
+    width: 250px;
+    height: 500px;
+    position: absolute;
+    background-color: var(--white);
+    top: 65%;
+    left: -2%;
+    border-radius: 30px;
+    /* border: 2px solid black; */
+    padding: 20px;
+}
+.box2{
+    width: 220px;
+    height: 300px;
+    background-color: white;
+    border-radius: 30px;
+    position: relative;
+}
+.box{
+    width: 210px;
+    height: 150px;
+    position: absolute;
+    background-color: black;
+    border-radius: 30px;
+    padding: 30px;
+    top: 60%;
+    transition: all 1s ease;
+}
+.container-1:hover .img-container-2 .box{
+    top: 0%;
+}
+.box p{
+    color: white;
+    text-align: center;
+    line-height: 40px;
+    font-size: 25px;
+    margin: 0;
+    display: inline-block;
+    font-family: var(--primary-color);
 }
