@@ -7,6 +7,7 @@
 /* declaring variables */
 :root{
     --primary-color: #E7A391;
+    --primary-color-rgb: 231, 163, 145;
     --secondary-color: #F5F2EC;
     --tertiary-color: #FDF6F2;
     --text-color-light: #707070;
@@ -116,7 +117,7 @@ h1, h2, h3, h4, h5, h6{
     justify-content: flex-end;
 }
 .bg-color{
-    background-color: var(--primary-color);
+    background-color: rgb(var(--primary-color-rgb), 0.6);
     padding: 10px;
 }
 .section-side ul, .social-side ul{
@@ -502,15 +503,15 @@ h1, h2, h3, h4, h5, h6{
 
 /*============== section-3 ============= */
 
-.container-1 {
+.backgrounimg {
     position: relative;
     display: flex;
     width: 100%;
     height: 700px;
-    margin-top: 10px;
+    margin: 10px auto;
 }
 /* Background Image */
-.container-1::before {
+.backgroundimg::before {
     content: "";
     background-image: url(../images/section3-about/img-3.png);
     background-repeat: no-repeat;
@@ -528,181 +529,37 @@ h1, h2, h3, h4, h5, h6{
 .text-side {
     position: relative;
     height: 100%;
-    /* border: 2px solid black; */
-    padding-left: 40px;
+    border: 2px solid black;
     overflow: hidden;
+    padding: 40px;
+}
+
+.img-side {
+    position: relative;
+    height: 100%;
+    border: 2px solid black;
+    overflow: hidden;
+    padding: 40px;
 }
 
 /* "About" Section (Image + Text) */
 .text-side .about {
     position: absolute;
+    top: 10%;
+    left: 10%;
     width: 200px;
-    height: 50px;
-    top: 20%;
-    padding: 5px;
     display: flex;
-    align-items: center;
 }
 
 /* Image Inside "About" */
 .text-side .about img {
-    width: 40px;
+    width: 30px;
+    margin-right: 10px;
 }
 
 /* "About" Text */
-.text-side .about p {
-    margin-left: 10px;
-    font-size: 30px;
-    color: rgba(var(--black-rgb), 0.5);
+.text-side .about span{
+    font-size: 20px;
+    color: var(--text-color-light);
     font-family: var(--sec-font);
-}
-
-/* H2 Heading - Hidden by Default */
-.text-side .h2 {
-    position: absolute;
-    width: 100%;
-    top: 27%;
-    font-size: 50px;
-    font-weight: lighter;
-    opacity: 0;
-    right: -100%; /* Start off-screen */
-    transition: all 1s ease-out; /* Smooth transition */
-}
-
-/* H2 Text Font */
-.text-side .h2 p {
-    font-weight: lighter;
-    font-family: var(--sec-font);
-}
-
-/* ✅ H2 Appears on Hover */
-.container-1:hover .text-side .h2 {
-    right: -40px; /* Moves into view */
-    opacity: 1;
-}
-.text-side .para{
-    width: 90%;
-    position: absolute;
-    top: 50%;
-    font-size: 20px;
-    padding-right: 21px;
-    /* background-color: aqua; */
-    color: rgba(var(--black-rgb), 0.6);
-    font-size: var(--pri-font);
-}
-.ul-container{
-    width: 98%;
-    height: 100px;
-    /* background-color: bisque; */
-    position: absolute;
-    top: 60%;
-    display: flex;
-    padding: 20px;
-    font-size: 20px;
-    color: rgba(var(--black-rgb), 0.6);
-}
-.ul-container ul li{
-    margin: 20px;
-    list-style: none;
-    font-family: var(--pri-font);
-}
-.ul-container ul li i{
-    color: var(--primary-color);
-}
-.button2{
-    position: relative;
-    width: 200px;
-    height: 50px;
-    border: 2px solid var(--primary-color);
-    padding: 10px;
-    border-radius: 50px;
-    background-color: rgba(var(--white-rgb), 0.9);
-    cursor: pointer;
-    overflow: hidden;
-    text-align: center;
-    line-height: 20px;
-    transition: all 0.5s ease;
-    display: inline-block;
-    z-index: 1000;
-    top: 90%;
-    left: 5%;
-    /* animation: slidein 2s ease-in-out forwards; */
-}
-.button2 a{
-    text-decoration: none;
-    color: var(--primary-color);
-    font-size: 20px;
-    z-index: 1;
-    position: relative;
-    line-height: 30px;
-    font-family: var(--pri-font);
-}
-.button2::before{
-    content: "";
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    background-color: var(--black);
-    top: 0;
-    left: -100%;
-    transition: all 0.5s ease;
-}
-.button2:hover::before{
-    left: 0;
-}
-.button2:hover a {
-    color: var(--white); /* Make text visible on hover */
-}
-.img-container-2{
-    position: relative;
-    width: 40%;
-    height: 80%;
-    /* border: 2px solid black; */
-    padding-left: 40px;
-    overflow: hidden;
-    background-image: url(../images/section3-about/woman.jpg);
-    object-fit: cover;
-    margin: 50px;
-    margin-top: 70px;
-    border-radius: 30px;
-}
-.box1{
-    width: 250px;
-    height: 500px;
-    position: absolute;
-    background-color: var(--white);
-    top: 65%;
-    left: -2%;
-    border-radius: 30px;
-    /* border: 2px solid black; */
-    padding: 20px;
-}
-.box2{
-    width: 220px;
-    height: 300px;
-    background-color: white;
-    border-radius: 30px;
-    position: relative;
-}
-.box{
-    width: 210px;
-    height: 150px;
-    position: absolute;
-    background-color: black;
-    border-radius: 30px;
-    padding: 30px;
-    top: 60%;
-    transition: all 1s ease;
-}
-.container-1:hover .img-container-2 .box{
-    top: 0%;
-}
-.box p{
-    color: white;
-    text-align: center;
-    line-height: 40px;
-    font-size: 25px;
-    margin: 0;
-    display: inline-block;
-    font-family: var(--primary-color);
 }
