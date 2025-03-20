@@ -377,7 +377,7 @@ h1, h2, h3, h4, h5, h6{
     /* background-color: rgba(0, 0, 0, 0.5); */
     z-index: 1000;
     top: 50%;
-    left: 30%;
+    left: 28%;
     transform: translate(-50%, -50%);
     padding: 10px;
     animation: slidein 2s ease-in-out forwards;
@@ -407,7 +407,7 @@ h1, h2, h3, h4, h5, h6{
         opacity: 1;
     }
     100%{
-        left: 30%;
+        left: 28%;
         opacity: 1;
     }
 }
@@ -418,7 +418,7 @@ h1, h2, h3, h4, h5, h6{
     /* background-color: rgba(0, 0, 0, 0.5); */
     z-index: 1000;
     top: 55%;
-    left: 10%;
+    left: 7%;
     transform: translate(-50%, -50%);
     animation: slidein 2s ease-in-out forwards;
 }
@@ -434,7 +434,7 @@ h1, h2, h3, h4, h5, h6{
     height: auto;
     /* background-color: rgba(0, 0, 0, 0.5); */
     top: 65%;
-    right: 25%;
+    right: 26.5%;
     /* transform: translate(-50%, -50%); */
     z-index: 1000;
     animation: slide 2s ease-in-out;
@@ -454,38 +454,32 @@ h1, h2, h3, h4, h5, h6{
         opacity: 1;
     }
     100%{
-        right: 25%;
+        right: 26.5%;
         opacity: 1;
     }
 }
 
 /*============== button ============= */
 
-.img-container .button{
+.img-container .btn{
     position: relative;
-    width: 200px;
-    height: 50px;
     /* border: 2px solid black; */
-    padding: 10px;
+    padding: 20px;
     border-radius: 50px;
     background-color: var(--primary-color);
-    cursor: pointer;
     overflow: hidden;
-    text-align: center;
     transition: all 0.5s ease;
     display: inline-block;
     z-index: 1000;
-    top: 85%;
-    left: 13%;
+    top: 80%;
+    left: 10%;
     /* animation: slidein 2s ease-in-out forwards; */
 }
-.img-container .button a{
-    text-decoration: none;
+.img-container .btn a{
     color: azure;
     font-size: 20px;
     z-index: 1;
     position: relative;
-    line-height: 30px;
 }
 .img-container .button::before{
     content: "";
@@ -507,63 +501,20 @@ h1, h2, h3, h4, h5, h6{
 
 /*============== section-3 ============= */
 
-.backgrounimg {
+.bgimg{
     position: relative;
-    display: flex;
-    width: 100%;
     height: 700px;
-    margin: 10px auto;
+    /* background-color: #000; */
 }
-/* Background Image */
-.backgroundimg::before {
+.bgimg::after{
+    position: absolute;
     content: "";
     background-image: url(../images/section3-about/img-3.png);
+    width: 100%;
+    height: 100%;
     background-repeat: no-repeat;
-    background-size: cover;
-    position: absolute;
-    width: 30%;
-    height: 90%;
-    top: 20%;    
     left: 0;
+    top: 70%;
+    transform: translateY(-50%);
     opacity: 0.5;
-    z-index: -1;
-}
-
-/* Text Side */
-.text-side {
-    position: relative;
-    height: 100%;
-    border: 2px solid black;
-    overflow: hidden;
-    padding: 40px;
-}
-
-.img-side {
-    position: relative;
-    height: 100%;
-    border: 2px solid black;
-    overflow: hidden;
-    padding: 40px;
-}
-
-/* "About" Section (Image + Text) */
-.text-side .about {
-    position: absolute;
-    top: 10%;
-    left: 10%;
-    width: 200px;
-    display: flex;
-}
-
-/* Image Inside "About" */
-.text-side .about img {
-    width: 30px;
-    margin-right: 10px;
-}
-
-/* "About" Text */
-.text-side .about span{
-    font-size: 20px;
-    color: var(--text-color-light);
-    font-family: var(--sec-font);
 }
