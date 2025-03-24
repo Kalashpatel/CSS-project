@@ -116,6 +116,28 @@ h1, h2, h3, h4, h5, h6{
 .justify-end{
     justify-content: flex-end;
 }
+.title{
+   display: flex;
+   flex-direction: column;
+   gap: 10px; 
+}
+.title .about{
+    display: flex;
+    gap: 5px;
+    color: var(--text-color-light);
+    font-family: var(--sec-font);
+    font-size: 25px;
+}
+.title h2{
+    font-size: 50px;
+    margin-bottom: 10px;
+    font-weight: 0;
+    transform: translateX(90%);
+    transition: all 1.5s ease;
+    opacity: 0;
+}
+
+/* Top bar */
 .topbar{
     background-color: rgb(var(--primary-color-rgb), 0.8);
     padding: 5px 0;
@@ -401,7 +423,7 @@ h1, h2, h3, h4, h5, h6{
     background-image: url(../images/section2-banner/img1.jpg);
     opacity: 1;
     transform: scale(1);
-    animation: fade 15s infinite;
+    animation: fade 10s infinite;
     transform: scale(1);
 }
 @keyframes fade{
@@ -426,7 +448,7 @@ h1, h2, h3, h4, h5, h6{
     background-image: url(../images/section2-banner/img2.jpg);
     opacity: 0;
     transform: scale(1);
-    animation: Fadeimage 15s infinite alternate;
+    animation: Fadeimage 10s infinite alternate;
     
 }
 @keyframes Fadeimage{
@@ -582,23 +604,7 @@ h1, h2, h3, h4, h5, h6{
     overflow: hidden;
     /* background-color: #000; */
 }
-.text-side .about{
-    display: flex;
-    gap: 5px;
-    color: var(--text-color-light);
-    font-family: var(--sec-font);
-    font-size: 25px;
-}
-.text-side h1{
-    font-size: 50px;
-    margin-top: 20px;
-    margin-bottom: 25px;
-    font-weight: 0;
-    transform: translateX(90%);
-    transition: all 1.5s ease;
-    opacity: 0;
-}
-.bgimg:hover h1{
+.bgimg:hover h2{
     transform: translateX(0%);
     opacity: 1;
 }
@@ -827,41 +833,20 @@ h1, h2, h3, h4, h5, h6{
 }
 .inner-content{
     display: flex;
-    padding-top: 115px;
+    padding-top: 40px;
     padding-bottom: 75px;
     flex-direction: column;
     gap: 10px;
 }
-.services-title{
-    display: flex;
-    flex-direction: column;
-    margin: 5px auto;
-    width: 55%;
-    height: 200px;
-    /* background-color: #707070; */
-}
-.services-title .about{
-    display: flex;
-    gap: 5px;
-    font-family: var(--sec-font);
-    color: var(--text-color-light);
-    font-size: 25px;
-    margin: 10px auto;
-}
-.services-title .h1{
-    /* background-color: #b9b8b8; */
+.center{
     text-align: center;
-    transform: translateX(100%);
-    transition: all 1.5s ease;
-    opacity: 0;
+    margin-top: 70px;
 }
-.services-title .h1 p{
-    font-size: 55px;
-    margin: 2px auto;
-    font-weight: 10;
-    font-family: var(--sec-font);
+.center .about{
+    margin: 5px auto;
+    margin-bottom: 10px;
 }
-.background:hover .services-title .h1{
+.background:hover .title h2{
     transform: translateX(2%);
     opacity: 1;
 }
@@ -1090,28 +1075,17 @@ h1, h2, h3, h4, h5, h6{
     /* background-color: #707070; */
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 20px;
 }
-.form-title .contact{
-    display: flex;
-    gap: 10px;
+.form-title .about{
     color: var(--white);
-    font-family: var(--sec-font);
 }
-.form-heading{
-    width: 100%;
-    margin-top: 20px;
-    transform: translateX(90%);
-    transition: all 1s ease;
-    opacity: 0;
+.form-title h2{
+    color: var(--white);
 }
-.form-box:hover .form-heading{
+.form-box:hover .title h2{
     transform: translateX(0%);
     opacity: 1;
-}
-.form-heading h2{
-    font-size: 55px;
-    color: var(--white);
 }
 .form-content p{
     font-size: 20px;
@@ -1195,6 +1169,7 @@ option:hover{
     margin-left: 10px;
     text-align: center;
     transition: all 0.5s ease;
+    z-index: 1;
 }
 .submit a{
     text-decoration: none;
@@ -1225,24 +1200,6 @@ option:hover{
     height: auto;
     padding: 30px;
     overflow: hidden;
-}
-.video-side .video-title{
-    width: 100%;
-}
-.v-title{
-    display: flex;
-    gap: 5px;
-    font-family: var(--sec-font);
-    color: var(--text-color-light);
-}
-.video-title h2{
-    margin-top: 10px;
-    width: 100%;
-    font-size: 55px;
-    font-family: var(--sec-font);
-    transform: translateX(100%);
-    opacity: 0;
-    transition: all 1s ease;
 }
 .pd-v:hover h2{
     transform: translateX(0%);
@@ -1380,36 +1337,7 @@ option:hover{
 }
 
 /* Section-9 Prices */
-
-.price-box{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
-.price-box .price-title{
-    text-align: center;
-    margin: 120px auto;
-    margin-bottom: 0;
-    display: flex;
-    flex-direction: column;
-}
-.price-about{
-    display: flex;
-    gap: 10px;
-    font-family: var(--sec-font);
-    color: var(--text-color-light);
-    font-size: 20px;
-    margin: 5px auto;
-}
-.price-title h1{
-    font-size: 55px;
-    transform: translateX(90%);
-    transition: all 1s ease;
-    opacity: 0;
-}
-.p-hover:hover h1{
+.p-hover:hover h2{
     transform: translateX(6%);
     opacity: 1;
 }
@@ -1417,6 +1345,7 @@ option:hover{
     width: 100%;
     height: 500px;
     display: flex;
+    margin-top: 20px;
     /* background-color: #e65252; */
 }
 .left-box{
