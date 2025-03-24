@@ -116,6 +116,21 @@ h1, h2, h3, h4, h5, h6{
 .justify-end{
     justify-content: flex-end;
 }
+.grow{
+    flex-grow: 1;
+}
+.order-1{
+    order: 1;
+}
+.order-2{
+    order: 2;
+}
+.order-3{
+    order: 3;
+}
+.order--1{
+    order: -1;
+}
 .title{
    display: flex;
    flex-direction: column;
@@ -129,7 +144,7 @@ h1, h2, h3, h4, h5, h6{
     font-size: 25px;
 }
 .title h2{
-    font-size: 50px;
+    font-size: 55px;
     margin-bottom: 10px;
     font-weight: 0;
     transform: translateX(90%);
@@ -833,7 +848,7 @@ h1, h2, h3, h4, h5, h6{
 }
 .inner-content{
     display: flex;
-    padding-top: 40px;
+    padding-top: 10px;
     padding-bottom: 75px;
     flex-direction: column;
     gap: 10px;
@@ -1013,9 +1028,10 @@ h1, h2, h3, h4, h5, h6{
     margin-right: 20px;
     font-size: 80px;
     font-family: var(--sec-font);
+    text-align: center;
 }
 .slide-p{
-    width: 500px;
+    width: 450px;
     margin-left: 20px;
     margin-right: 20px;
     font-size: 80px;
@@ -1023,6 +1039,7 @@ h1, h2, h3, h4, h5, h6{
     color: transparent;
     -webkit-text-stroke: 2px black;
     letter-spacing: 1px;
+    text-align: center;
 }
 
 /* Section-7 Form */
@@ -1206,11 +1223,11 @@ option:hover{
     opacity: 1;
 }
 .video-side p{
-    margin-top: 20px;
+    margin-top: 0px;
     font-size: 16px;
     font-family: var(--pri-font);
     color: var(--text-color-light);
-    
+    line-height: 30px;
 }
 
 .video {
@@ -1423,9 +1440,6 @@ option:hover{
     font-size: 17px;
     color: var(--text-color-light);
 }
-.ppd{
-    margin-right: 45px;
-}
 .plan-title h3 a:hover{
     color: var(--primary-color);
 }
@@ -1433,3 +1447,250 @@ option:hover{
     transition: all 0.5s ease;
     color: var(--black);
 }
+
+/* section-10 testimonials */
+.reviews{
+    margin-top: 100px;
+    margin-bottom: 50px;
+    overflow: hidden;
+}
+.review-title{
+    display: flex;
+}
+.review-title .arrows{
+    display: flex;
+    gap: 5px;
+}
+.left-arrow{
+    padding: 15px;
+    background-color: rgba(var(--primary-color-rgb), 0.5);
+    text-align: center;
+    border-radius: 10px;
+}
+.left-arrow i{
+    color: var(--primary-color);
+    font-size: 30px;
+}
+.reviews:hover .title h2{
+    transform: translateX(0%);
+    opacity: 1;
+}
+.reviews .title{
+    margin-bottom: 40px;
+}
+.review-box{
+    width: 100%;
+    height: 300px;
+    background: url(../images/section10-review/testimonial-item-mask.png);
+    background-size: cover;
+    border-radius: 20px;
+    position: relative;
+}
+.review-box::before{
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    top: 2%;
+    left: 0%;
+    border-radius: 50%;
+    background-image: url(../images/section10-review/Testimonial2.jpg);
+    background-size: cover;
+}
+.face-2::before{
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    top: 2%;
+    left: 0%;
+    border-radius: 50%;
+    background-image: url(../images/section10-review/Testimonial.jpg);
+    background-size: cover;
+}
+.face-3::before{
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    top: 2%;
+    left: 0%;
+    border-radius: 50%;
+    background-image: url(../images/section10-review/Testimonial3.jpg);
+    background-size: cover;
+}
+.content-box{
+    padding: 30px;
+}
+.content-box .heading{
+    font-weight: 300;
+    margin-top: 10px;
+}
+.content-box .heading p{
+    margin-top: 5px;
+    text-align: left;
+    margin-left: 100px;
+}
+.content-box > p{
+    margin-top: 35px;
+    text-align: left;
+    font-family: var(--pri-font);
+    color: var(--text-color-light);
+}
+.content-box .review-stars{
+    margin-top: 20px;
+    text-align: left;
+}
+.content-box .review-stars i{
+    color: var(--primary-color);
+}
+.content-box .review-stars i:last-child{
+    color: var(--white);
+}
+.face-3 .heading p{
+    margin-left: 110px;
+}
+.r-animation-1{
+    animation: rotate 12s ease infinite;
+}
+.r-animation-2{
+    animation: rotate-2 12s ease infinite;
+}
+.r-animation-3{
+    animation: rotate-3 12s ease infinite;
+}
+@keyframes rotate{
+    0%{
+        order: 1;
+    }
+    50%{
+        order: 1;
+    }
+    90%{
+        order: 1;
+    }
+} 
+@keyframes rotate-2{
+    0%{
+        order: 0;
+    }
+    50%{
+        order: 2;
+    }
+    90%{
+        order: 2;
+    } 
+}
+@keyframes rotate-3{
+    0%{
+        order: 0;
+    }
+    50%{
+        order: 0;
+    }
+    90%{
+        order: 3;
+    }
+}
+
+/* section-11 gallery */
+
+.gallery{
+    margin-top: 120px;
+    height: 900px;
+}
+.gallery .title{
+    text-align: center;
+    margin: 10px auto;
+}
+.gallery .title .about{
+    margin: 10px auto;
+}
+.gallery .title h2{
+    transform: translateX(1%);
+    opacity: 1;
+}
+/* .gallery:hover h2{
+    transform: translateX(1%);
+    opacity: 1;
+} */
+.gallery-grid{
+    width: 100%;
+    height: 650px;
+    position: relative;
+    /* background-color: #707070; */
+    margin-top: 20px;
+}
+.gimg-1, .gimg-2, .gimg-3, .gimg-4{
+    position: absolute;
+    width: 415px;
+    height: 310px;
+    overflow: hidden;
+    /* background-color: #E7A391; */
+}
+.gimg-1:hover img, .gimg-2:hover img, .gimg-3:hover img, .gimg-4:hover img, .gimg-center:hover img{
+    transform: scale(1.2);
+}
+.gimg-1, .gimg-1::before{
+    top: 0;
+    left: 0;
+}
+.gimg-2, .gimg-2::before{
+    bottom: 0;
+    left: 0;
+}
+.gimg-3, .gimg-3::before{
+    right: 0;
+    top: 0;
+}
+.gimg-4, .gimg-4::before{
+    right: 0;
+    bottom: 0;
+}
+.gimg-center{
+    position: absolute;
+    width: 420px;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow: hidden;
+    /* background-color: #707070; */
+}
+.gimg-center::before{
+    content: "";
+    position: absolute;
+    background: linear-gradient(to top, #000, transparent);
+    z-index: 1;
+    width: 420px;
+    height: 100%;
+    transition: all 0.4s ease;
+    opacity: 0.7;
+    transform: translateY(0%);
+    transform-origin: bottom center;
+    top: 0;
+    left: 0%;
+}
+.gallery-grid img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 1s ease;
+}
+.gimg-1::before, .gimg-2::before, .gimg-3::before, .gimg-4::before{
+    content: "";
+    position: absolute;
+    background: linear-gradient(to top, #000, transparent);
+    z-index: 1;
+    width: 415px;
+    height: 310px;
+    transition: all 0.4s ease;
+    opacity: 0.7;
+    transform: translateY(0%);
+    transform-origin: bottom;
+}
+.gimg-1:hover::before, .gimg-2:hover::before, .gimg-3:hover::before, .gimg-4:hover::before, .gimg-center:hover::before{
+    transform: translateY(100%);
+}
+
+ 
