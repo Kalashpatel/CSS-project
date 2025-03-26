@@ -13,8 +13,8 @@ html, body{
 }
 /* declaring variables */
 :root{
-    --primary-color: #E7A391;
-    --primary-color-rgb: 231, 163, 145;
+    --primary-color: rgb(109, 240, 252);
+    --primary-color-rgb: 5, 231, 252;
     --secondary-color: #F5F2EC;
     --tertiary-color: #FDF6F2;
     --text-color-light: #707070;
@@ -156,7 +156,6 @@ h1, h2, h3, h4, h5, h6{
 .top:hover a{
     opacity: 1;
     box-shadow: 0 8px 35px rgba(0, 0, 0, 0.5);
-    transform: scale(1.1);
 }
 
 /* section title */
