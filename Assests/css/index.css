@@ -140,7 +140,7 @@ h1, h2, h3, h4, h5, h6{
     width: 50px;
     border-radius: 50%;
     text-align: center;
-    background-image: linear-gradient(to right, #e7a391 0%, #f3d2ca 51%, #e7a391 100%);
+    background-image: linear-gradient(to right, var(--primary-color) 0%, #f3d2ca 51%, var(--primary-color) 100%);
     opacity: 0.5;
     padding: 2px;
     font-size: 25px;
@@ -623,6 +623,7 @@ h1, h2, h3, h4, h5, h6{
     position: relative;
     height: 700px;
     /* background-color: #000; */
+    overflow: hidden;
 }
 .bgimg::before{
     position: absolute;
@@ -682,49 +683,56 @@ h1, h2, h3, h4, h5, h6{
     width: 100%;
     min-height: 500px;
     padding: 10px;
-    overflow: hidden;
+    /* overflow: hidden;
     background-image: url(../images/section3-about/woman.jpg);
     background-size: cover;
     background-position: center;
-    border-radius: 30px;
+    border-radius: 30px; */
     /* background-color: #E7A391; */
 }
+.img-side img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    -webkit-mask-image: url(../images/section3-about/ab-shape1.png);
+    -webkit-mask-size: contain;
+    -webkit-mask-position: center center;
+    -webkit-mask-repeat: no-repeat;
+}
 .box1{
-    width: 250px;
-    height: 500px;
+    width: 240px;
+    height: 180px;
     position: absolute;
     background-color: var(--white);
-    top: 65%;
-    left: -2%;
+    top: 70%;
+    left: 0%;
     border-radius: 30px;
     /* border: 2px solid black; */
-    padding: 20px;
-}
-.box2{
-    width: 220px;
-    height: 300px;
-    background-color: white;
-    border-radius: 30px;
-    position: relative;
+    overflow: hidden;
 }
 .box{
     width: 210px;
-    height: 150px;
+    height: 130px;
     position: absolute;
     background-color: black;
     border-radius: 30px;
     padding: 30px;
     top: 60%;
     transition: all 1s ease;
+    margin-top: 10px;
+    margin-left: 10px;
+    opacity: 0;
 }
 .bgimg:hover .img-side .box{
     top: 0%;
+    opacity: 1;
 }
 .box p{
     color: white;
     text-align: center;
     line-height: 40px;
-    font-size: 25px;
+    font-size: 22px;
     margin: 0;
     display: inline-block;
     font-family: var(--primary-color);
@@ -1961,4 +1969,36 @@ option:hover{
     color: var(--white);
     margin-bottom: 30px;
     display: inline-block;
+}
+
+/* footer bottom */
+
+.footer-bottom{
+    width: 100%;
+    height: 50px;
+    background-color: var(--primary-color);
+    padding: 5px;
+}
+.f-bottom ul{
+    display: flex;
+    gap: 15px;
+}
+.f-bottom ul li a{
+    display: block;
+    width: 35px;
+    height: 35px;
+    color: var(--black);
+    background-color: var(--white);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 35px;
+    margin-top: 2px;
+}
+.f-bottom ul li a:hover{
+    color: var(--primary-color);
+}
+.f-credit span{
+    font-size: 16px;
+    font-family: var(--pri-font);
+    margin-left: 5px;
 }
